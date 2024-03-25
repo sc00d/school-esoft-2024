@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Дом в CSS</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            background-color: #e7ecf2;
+        }
+        .house-container {
+            position: relative;
+            width: 200px; /* Ширина основания дома */
+        }
+        .base {
+            width: 100%;
+            height: 150px; /* Высота основания дома */
+            background-color: #8b5a2b; /* Цвет основания дома */
+        }
+        .roof {
+            width: 0;
+            height: 0;
+            border-left: 100px solid transparent; /* Половина ширины основания */
+            border-right: 100px solid transparent; /* Половина ширины основания */
+            border-bottom: 70px solid #8b0000; /* Высота и цвет крыши */
+            position: absolute;
+            top: -70px; /* На высоту крыши выше основания */
+            left: 0;
+        }
+        .chimney {
+            width: 30px;
+            height: 60px; /* Высота дымохода */
+            background-color: #696969; /* Цвет дымохода */
+            position: absolute;
+            top: -130px; /* Высота крыши плюс высота дымохода */
+            right: 20px; /* Отступ справа */
+        }
+        .window {
+            width: 50px; /* Диаметр окна */
+            height: 50px; /* Диаметр окна */
+            background-color: #add8e6; /* Цвет окна */
+            border-radius: 50%; /* Скругление для круглой формы */
+            position: absolute;
+            top: 50px; /* Отступ сверху от начала основания */
+            left: calc(50% - 25px); /* Расположение по центру */
+        }
+    </style>
+</head>
+<body>
+    <div class="house-container">
+        <div class="roof"></div>
+        <div class="chimney"></div>
+        <div class="base">
+            <div class="window"></div>
+        </div>
+    </div>
+</body>
+</html>
